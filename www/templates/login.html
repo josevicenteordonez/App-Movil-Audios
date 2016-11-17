@@ -1,0 +1,60 @@
+<ion-view view-title="Auddiar - Login">
+  <ion-content>
+
+	<div class="wrapper center">
+
+	  	<img class="logo" src="img/logo.png"/> 
+
+		<div class="list">
+		  <label class="item item-input item-floating-label">
+		  	<span class="input-label">Usuario</span>
+		    <input type="text" placeholder="Usuario">
+		  </label>
+		  <label class="item item-input item-floating-label">
+		  	<span class="input-label">Contraseña</span>
+		    <input type="password" placeholder="Contraseña">
+		  </label>
+		</div>
+
+		<a class="links" href="#">Olvidaste tu contraseña</a>
+		<button class="button button-full button-light" ng-click="go('tab/todos')">Login</button>
+
+
+	</div>
+
+
+	<div class="margin-small"></div>
+
+
+	<div class="footer center" >
+		<p class="links">¿No tenés cuenta?</p>
+		<button class="button button-full button-light" ng-click="go('register')">Registrate</button>
+		
+		<div class="full-width" >
+			<a class="links full-width">REGISTRARSE CON</a>
+			<img src="img/facebook-icon.png" ng-click="loginFacebook()"/>
+
+			 <!-- <button class="button button-positive button-block" ng-click="loginFacebook()">Login with Facebook</button> -->
+			
+			<div id="status">
+			</div>
+		</div>
+
+    <!--    
+	<a class="facebook-sign-in button button-block button-light" onlogin="checkLoginState();"><img src="img/facebook-icon.png"/></a>
+    <a class="facebook-sign-in button button-block button-light" scope="public_profile,email" onLogin="checkLoginState();"><img src="img/facebook-icon.png"/></a>
+
+     <a class="button button-block button-light" scope="public_profile,email" onLogin="checkLoginState();"><img src="img/facebook-icon.png"/></a>
+
+     <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+     </fb:login-button>
+
+	 <fb:login-button data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true" onlogin="checkLoginState();" scope="public_profile, pages_show_list"></fb:login-button>
+
+ -->
+  	</div>
+  	
+  </ion-content>
+  
+
+</ion-view>

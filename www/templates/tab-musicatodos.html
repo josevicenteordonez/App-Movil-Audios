@@ -1,0 +1,67 @@
+  <ion-view view-title="Auddiar - Todos">
+
+  <ion-content class="has-subheader has-footer nopaddingtop" id="content-auditor">
+  <ion-refresher
+    pulling-text="Tire para refrescar ..."
+    on-refresh="loadAudiosRefresh()">
+  </ion-refresher>
+  
+  <div id="buscador">
+    <input class="buscadorautores" placeholder="BUSCADOR" ng-model="model.search.Title">
+    <i class="ion-ios-search searchicon"></i>
+  </div>
+  <div id="vista-autores">
+    
+
+<div ng-repeat="audio in model.audios | filter:model.search"> 
+    <a class="linkautor"  href="" >
+      <div id="itemautor{{audio.Id}}" class="itemautor">
+        <div id="btnplay{{audio.Id}}" class="btnplay"></div>
+        <div id="contieneautor{{audio.Id}}" class="contiene-autor" ng-click="hideMore({{audio.Id}})" >
+        <p class="name-autor">{{audio.Title}}</p>
+        <div class="clear"> </div>
+        <p class="nombreautor">{{audio.Author}}</p><p class="cantidadaudios segundos todosline">{{audio.Seconds}}  SEG</p>
+        </div>
+        <div class="flecha-autor">
+          <a href="" class="mostrar" ng-click="showMore({{audio.Id}})"><i id="more{{audio.Id}}" class="ion-android-more-vertical"></i></a>
+        </div>
+        <a id="" href="" ng-click="fav()">
+        
+        <div id="boton1{{audio.Id}}" ng-click="setFavourite(audio.Id, audio.FlagFavourite)" ng-class="audio.FlagFavourite ? 'contieneboton1Enable' : 'contieneboton1'" class="ocultar">
+            <div id="detailboton1{{audio.Id}}" ng-class="audio.FlagFavourite ? 'icondet2Enable' : 'icondet2'"></div>
+        </div>
+        
+        </a>
+        <div id="boton2{{audio.Id}}"  class="contieneboton2 ocultar">
+          <div class="icondet1"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </a>
+  </div>
+
+
+  </div>
+    </ion-content>
+
+  <footer>
+    <div class="tabs tabs-icon-only">
+      <a id="icon1" class="tab-item" href="#/tab/todos">
+        <i class="icon"></i>
+      </a>
+      <a id="icon2" class="tab-item" href="#/crear">
+        <i class="icon"></i>
+      </a>
+      <a id="icon3" class="tab-item activated2"href="#/tabmusica/categoria">
+        <i class="icon"></i>
+      </a>
+      <a id="icon4" class="tab-item">
+        <i class="icon"></i>
+      </a>
+    </div>
+  </footer>
+    
+
+  
+
+</ion-view>
